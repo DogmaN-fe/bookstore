@@ -23,9 +23,12 @@
         </span>
         <nav class="header__section">
             <ul class="section--navigation__links flex">
-                <li class="navigation__links--link"><a href="#" class="navigation__links--link-title navigation__links--link-active">books</a></li>
-                <li class="navigation__links--link"><a href="#" class="navigation__links--link-title">audiobooks</a></li>
-                <li class="navigation__links--link"><a href="#" class="navigation__links--link-title">Stationery & gifts</a></li>
+                <li class="navigation__links--link"><a href="#"
+                        class="navigation__links--link-title navigation__links--link-active">books</a></li>
+                <li class="navigation__links--link"><a href="#" class="navigation__links--link-title">audiobooks</a>
+                </li>
+                <li class="navigation__links--link"><a href="#" class="navigation__links--link-title">Stationery &
+                        gifts</a></li>
                 <li class="navigation__links--link"><a href="#" class="navigation__links--link-title">blog</a></li>
             </ul>
         </nav>
@@ -46,23 +49,17 @@
             </ul>
         </span>
     </header>
+
     <main class="main">
         <section class="main__slider">
             <div class="main__slider--section flex">
-                <img src="./src/images/svg/banner.svg" alt="banner" class="section__banner">
+                <div class="section__slides flex">
+                    <img src="./src/images/png/banner.png" alt="banner" class="section__banner section__banner--hide">
+                    <img src="./src/images/svg/banner 2.svg" alt="banner" class="section__banner section__banner--hide">
+                    <img src="./src/images/svg/banner 3.svg" alt="banner" class="section__banner section__banner--hide">
+                </div>
                 <span class="section__switches">
-                    <span class="switch switch--active"></span>
                     <span class="switch"></span>
-                    <span class="switch"></span>
-                </span>
-            </div>
-            <div class="main__slider--section"></div>
-        </section>
-        <section class="main__slider">
-            <div class="main__slider--section flex">
-                <img src="./src/images/svg/banner.svg" alt="banner" class="section__banner">
-                <span class="section__switches">
-                    <span class="switch switch--active"></span>
                     <span class="switch"></span>
                     <span class="switch"></span>
                 </span>
@@ -72,6 +69,7 @@
     </main>
 
     <!-- Скрипты -->
+    <script src="./src/scripts/javascript/slider.js"></script>
 </body>
 
 </html>

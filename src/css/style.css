@@ -52,28 +52,54 @@
 }
 
 /* Main */
+.main {
+  padding-top: 116px;
+}
 .main__slider--section {
   flex-direction: column;
   align-items: center;
 }
 
+.section__slides {
+  justify-content: center;
+}
+
+.section__banner {
+  max-width: 1120px;
+  max-height: 702px;
+  animation: fade 1s;
+}
+.section__banner--hide {
+  display: none;
+}
+
 .section__switches {
   display: flex;
   width: 56px;
-  height: 15px;
+  height: 12px;
 }
 
 .switch {
-  width: 15px;
+  width: 12px;
   height: 100%;
   background-color: #EFEEF6;
   border-radius: 100%;
+  transition: background-color 0.3s ease-out;
 }
 .switch:not(:last-child) {
   margin-right: 5px;
 }
 .switch--active {
   background-color: #9E98DC;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

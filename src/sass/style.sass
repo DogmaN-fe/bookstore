@@ -47,28 +47,45 @@
 
     justify-content: space-between
 
-
 /* Main */
 
 .main
+    padding-top: 116px
     &__slider--section
         flex-direction: column
         align-items: center
 
+.section__slides
+    justify-content: center
+
+.section__banner
+    max-width: 1120px
+    max-height: 702px
+
+    animation: fade 1s
+    &--hide
+        display: none
+
 .section__switches
     display: flex
     width: 56px
-    height: 15px
+    height: 12px
 
 .switch
-    width: 15px
+    width: 12px
     height: 100%
-
-    &:not(:last-child)
-        margin-right: 5px
-            
     background-color: #EFEEF6
     border-radius: 100%
+    transition: background-color 0.3s ease-out
+    &:not(:last-child)
+        margin-right: 5px
 
     &--active
         background-color: #9E98DC
+
+@keyframes fade
+    0%
+        opacity: 0.6
+
+    100%
+        opacity: 1
