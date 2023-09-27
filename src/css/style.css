@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Global */
 .flex {
   display: flex;
@@ -5,12 +6,12 @@
 
 .body {
   flex-direction: column;
-  align-items: center;
   font-family: Montserrat;
 }
 
 /* Header */
 .header {
+  z-index: 1;
   position: fixed;
   text-transform: uppercase;
   width: 100%;
@@ -55,17 +56,62 @@
 .main {
   padding-top: 116px;
 }
+.main__slider {
+  justify-content: center;
+  box-sizing: content-box;
+  padding-bottom: 102px;
+  max-height: 732px;
+}
 .main__slider--section {
+  position: relative;
   flex-direction: column;
   align-items: center;
 }
+.main__categories-and-category-books {
+  color: red;
+}
 
+/* SLIDER */
 .section__slides {
   justify-content: center;
 }
+.section__additional-information-one {
+  position: relative;
+  top: 40px;
+  padding: 102px 20px 20px 20px;
+  margin-left: -70px;
+  width: 149px;
+  height: 204px;
+  background: #9E98DC;
+  color: var(--text-black, #1C2A39);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0px 24px 36px 0px rgba(53, 49, 84, 0.28);
+}
+.section__additional-information-one-a {
+  color: var(--text-black, #1C2A39);
+}
+.section__additional-information-two {
+  position: relative;
+  top: 100px;
+  padding: 149px 47px 20px 20px;
+  margin-left: 20px;
+  width: 137px;
+  height: 273px;
+  background: #FF8FE6;
+  color: var(--text-black, #1C2A39);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0px 24px 36px 0px rgba(53, 49, 84, 0.28);
+}
+.section__additional-information-two-a {
+  color: var(--text-black, #1C2A39);
+}
 
 .section__banner {
-  max-width: 1120px;
+  max-width: 100%;
   max-height: 702px;
   animation: fade 1s;
 }
@@ -77,6 +123,7 @@
   display: flex;
   width: 56px;
   height: 12px;
+  margin-top: 17px;
 }
 
 .switch {
@@ -100,6 +147,42 @@
   100% {
     opacity: 1;
   }
+}
+/* BOOKS */
+.categories {
+  height: 710px;
+  background: #EFEEF6;
+}
+.categories-links {
+  padding: 45px 152px 81px 138px;
+}
+.categories-links__link {
+  position: relative;
+  color: var(--text-gray, #5C6A79);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.categories-links__link:not(:last-child) {
+  margin-bottom: 23px;
+}
+.categories-links__link:hover {
+  cursor: pointer;
+  color: #1C2A39;
+  transition: color 0.5s ease-out;
+}
+.categories-links__link--active {
+  position: relative;
+  color: var(--text-black, #1C2A39);
+  font-size: 16px;
+  font-weight: 700;
+}
+.categories-links__link--active::before {
+  position: absolute;
+  left: -10%;
+  content: "•";
+  color: #756AD3;
 }
 
 /*# sourceMappingURL=style.css.map */

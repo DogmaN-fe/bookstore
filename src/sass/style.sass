@@ -1,3 +1,9 @@
+=basic-for-additional-information()
+    color: var(--text-black, #1C2A39)
+    font-size: 18px
+    font-weight: 700
+    text-transform: uppercase
+    box-shadow: 0px 24px 36px 0px rgba(53, 49, 84, 0.28)
 /* Global */
 
 .flex
@@ -5,11 +11,12 @@
 
 .body
     flex-direction: column
-    align-items: center
     font-family: Montserrat
 
 /* Header */
 .header
+    z-index: 1
+
     position: fixed
     text-transform: uppercase
 
@@ -51,15 +58,54 @@
 
 .main
     padding-top: 116px
-    &__slider--section
-        flex-direction: column
-        align-items: center
+    &__slider
+        justify-content: center
+        box-sizing: content-box
+        padding-bottom: 102px
+        max-height: 732px
+        &--section
+            position: relative
+            flex-direction: column
+            align-items: center
+    &__categories-and-category-books
+        color: red
 
-.section__slides
-    justify-content: center
+/* SLIDER */
+.section
+    &__slides
+        justify-content: center
+    &__additional-information-one
+        position: relative
+
+        top: 40px
+
+        padding: 102px 20px 20px 20px
+        margin-left: -70px
+        width: 149px
+        height: 204px
+
+        background: #9E98DC
+        +basic-for-additional-information
+        &-a
+            color: var(--text-black, #1C2A39)
+
+    &__additional-information-two
+        position: relative
+
+        top: 100px
+
+        padding: 149px 47px 20px 20px
+        margin-left: 20px
+        width: 137px
+        height: 273px
+
+        background: #FF8FE6
+        +basic-for-additional-information
+        &-a
+            color: var(--text-black, #1C2A39)
 
 .section__banner
-    max-width: 1120px
+    max-width: 100%
     max-height: 702px
 
     animation: fade 1s
@@ -70,6 +116,7 @@
     display: flex
     width: 56px
     height: 12px
+    margin-top: 17px
 
 .switch
     width: 12px
@@ -89,3 +136,34 @@
 
     100%
         opacity: 1
+
+/* BOOKS */
+
+.categories
+    height: 710px
+    background: #EFEEF6
+    &-links
+        padding: 45px 152px 81px 138px
+        &__link
+            position: relative
+            color: var(--text-gray, #5C6A79)
+            font-size: 12px
+            font-weight: 500
+            line-height: normal
+            text-transform: capitalize
+            &:not(:last-child)
+                margin-bottom: 23px
+            &:hover
+                cursor: pointer
+                color: #1C2A39
+                transition: color 0.5s ease-out
+            &--active
+                position: relative
+                color: var(--text-black, #1C2A39)
+                font-size: 16px
+                font-weight: 700
+                &::before
+                    position: absolute
+                    left: -10%
+                    content: '•'
+                    color: #756AD3
