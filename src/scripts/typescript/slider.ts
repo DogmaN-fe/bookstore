@@ -1,8 +1,8 @@
-function showSlide(index: number, buttons:NodeListOf<Element>){
-    if(index < 0){
+function showSlide(index: number, buttons: NodeListOf<Element>) {
+    if (index < 0) {
         index = 2;
     }
-    else if(index > 2){
+    else if (index > 2) {
         index = 0;
     };
 
@@ -14,18 +14,27 @@ function showSlide(index: number, buttons:NodeListOf<Element>){
             buttons[i].classList.remove("switch--active");
         }
     });
-    
+
     slides[index].classList.remove("section__banner--hide");
     buttons[index].classList.add("switch--active");
 }
 
-function showFirstSlide(){
+function showFirstSlide() {
     showSlide(0, switches);
 }
 
 const switches = document.querySelectorAll(".switch");
 
-switches[0].addEventListener('click', () => {
+let slideNumber:number = 0;
+
+switches.forEach(switche => {
+    switche.addEventListener('click', () => {
+        showSlide(slideNumber, switches);
+    });
+    slideNumber++;
+});
+
+/* switches[0].addEventListener('click', () => {
     showSlide(0, switches);
 });
 
@@ -35,7 +44,7 @@ switches[1].addEventListener('click', () => {
 
 switches[2].addEventListener('click', () => {
     showSlide(2, switches);
-});
+}); */
 
 showFirstSlide();
 
