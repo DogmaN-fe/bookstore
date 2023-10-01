@@ -69,40 +69,43 @@
             align-items: center
     &__categories-and-category-books
         color: red
+        margin-bottom: 88px
 
 /* SLIDER */
 .section
     &__slides
         justify-content: center
-    &__additional-information-one
-        position: relative
+    &__additional-information
+        &-one
+            position: relative
 
-        top: 40px
+            top: 40px
 
-        padding: 102px 20px 20px 20px
-        margin-left: -70px
-        width: 149px
-        height: 204px
+            padding: 102px 20px 20px 20px
+            margin-left: -70px
+            width: 149px
+            height: 204px
 
-        background: #9E98DC
-        +basic-for-additional-information
-        &-a
-            color: var(--text-black, #1C2A39)
+            background: #9E98DC
+            +basic-for-additional-information
+            &-a
+                color: var(--text-black, #1C2A39)
 
-    &__additional-information-two
-        position: relative
+        &-two
+            cursor: pointer
+            position: relative
 
-        top: 100px
+            top: 100px
 
-        padding: 149px 47px 20px 20px
-        margin-left: 20px
-        width: 137px
-        height: 273px
+            padding: 149px 47px 20px 20px
+            margin-left: 20px
+            width: 137px
+            height: 273px
 
-        background: #FF8FE6
-        +basic-for-additional-information
-        &-a
-            color: var(--text-black, #1C2A39)
+            background: #FF8FE6
+            +basic-for-additional-information
+            &-a
+                color: var(--text-black, #1C2A39)
 
 .section__banner
     max-width: 100%
@@ -137,13 +140,15 @@
     100%
         opacity: 1
 
-/* BOOKS */
+/* categories */
 
 .categories
     height: 710px
+    width: 416px
     background: #EFEEF6
     &-links
-        padding: 45px 152px 81px 138px
+        padding: 45px 81px 0 138px
+        height: 100%
         &__link
             position: relative
             color: var(--text-gray, #5C6A79)
@@ -151,12 +156,13 @@
             font-weight: 500
             line-height: normal
             text-transform: capitalize
+            transition: (color, font-size) 0.3s ease-out
             &:not(:last-child)
                 margin-bottom: 23px
             &:hover
                 cursor: pointer
                 color: #1C2A39
-                transition: color 0.5s ease-out
+                font-size: 16px
             &--active
                 position: relative
                 color: var(--text-black, #1C2A39)
@@ -167,3 +173,91 @@
                     left: -10%
                     content: '•'
                     color: #756AD3
+
+/* books */
+.category-books
+    margin-left: -60px
+    margin-top: 50px
+    display: grid
+
+    grid-template-columns: repeat(2, minmax(212px,424px))
+    grid-template-rows: minmax(150px, 300px)
+    grid-gap: 80px
+    &__book-card
+        max-width: 424px
+        max-height: 300px
+
+=basic-text-and-margin()
+    color: #5C6A79
+    font-size: 12px
+    font-weight: 400
+    argin-bottom: 4px
+    line-height: normal
+=basic-button()
+    width: 176px
+    height: 45px
+    border: 1px solid #4C3DB2
+    color: #4C3DB2
+    font-size: 8px
+    font-weight: 700
+    text-transform: uppercase
+    transition: (color, background) 0.5s ease-out
+.book-card
+    &--book-cover
+        width: 100%
+        height: 100%
+    &--img-settings
+        margin-right: 36px
+        min-width: 50%
+        min-height: 100%
+    &--description
+        flex-direction: column
+        justify-content: center
+        &--author
+            +basic-text-and-margin()
+            -webkit-line-clamp: 2
+            display: -webkit-box
+            -webkit-box-orient: vertical
+            overflow: hidden
+        &--book-name
+            +basic-text-and-margin()
+            color: #1C2A39
+            font-size: 18px
+            font-weight: 700
+            -webkit-line-clamp: 3
+            display: -webkit-box
+            -webkit-box-orient: vertical
+            overflow: hidden
+        &--view
+            +basic-text-and-margin()
+            margin-bottom: 16px
+        &--description
+            +basic-text-and-margin()
+            margin-bottom: 16px
+            -webkit-line-clamp: 3
+            display: -webkit-box
+            -webkit-box-orient: vertical
+            overflow: hidden
+        &--price
+            color: var(--text-black, #1C2A39)
+            font-size: 13px
+            font-weight: 700
+            text-transform: uppercase
+            margin-bottom: 16px
+        &--buy
+            +basic-button()
+            &:hover
+                background: #4C3DB2
+                color: #ffffff
+            &-not-active
+                +basic-button()
+                border: 1px solid #adadad
+                color: #adadad
+.main__more-books
+    justify-content: center
+    margin-bottom: 74px
+    &--button
+        +basic-button()
+        &:hover
+            background: #4C3DB2
+            color: #ffffff

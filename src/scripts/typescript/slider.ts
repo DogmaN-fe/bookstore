@@ -1,4 +1,9 @@
-function showSlide(index: number, buttons: NodeListOf<Element>) {
+/**
+ * Отрисовка слайда
+ * @param index Номер слайда
+ * @param buttons Переключатели слайдов
+ */
+export default function showSlide(index: number, buttons: NodeListOf<Element>) : void {
     if (index < 0) {
         index = 2;
     }
@@ -19,37 +24,3 @@ function showSlide(index: number, buttons: NodeListOf<Element>) {
     buttons[index].classList.add("switch--active");
 }
 
-function showFirstSlide() {
-    showSlide(0, switches);
-}
-
-const switches = document.querySelectorAll(".switch");
-
-let slideNumber:number = 0;
-
-switches.forEach(switche => {
-    switche.addEventListener('click', () => {
-        showSlide(slideNumber, switches);
-    });
-    slideNumber++;
-});
-
-/* switches[0].addEventListener('click', () => {
-    showSlide(0, switches);
-});
-
-switches[1].addEventListener('click', () => {
-    showSlide(1, switches);
-});
-
-switches[2].addEventListener('click', () => {
-    showSlide(2, switches);
-}); */
-
-showFirstSlide();
-
-let index: number = 0;
-setInterval(() => {
-    index = index > 2 ? 0 : index
-    showSlide(index++, switches)
-}, 5000);

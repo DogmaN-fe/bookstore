@@ -8,9 +8,11 @@
     <title>Bookstore</title>
 
     <!-- Стили -->
-    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./dist/main.css">
+    <!-- <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/fonts.css">
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/mediaRequest.css"> -->
 
 </head>
 
@@ -82,32 +84,39 @@
         <section class="main__categories-and-category-books flex">
             <div class="categories">
                 <ul class="categories-links">
-                    <li class="categories-links__link categories-links__link--active">Architecture</li>
-                    <li class="categories-links__link">Art & Fashion</li>
-                    <li class="categories-links__link">Biography</li>
-                    <li class="categories-links__link">Business</li>
-                    <li class="categories-links__link">Crafts & Hobbies</li>
-                    <li class="categories-links__link">Drama</li>
-                    <li class="categories-links__link">Fiction</li>
-                    <li class="categories-links__link">Food & Drink</li>
-                    <li class="categories-links__link">Health & Wellbeing</li>
-                    <li class="categories-links__link">History & Politics</li>
-                    <li class="categories-links__link">Humor</li>
-                    <li class="categories-links__link">Poetry</li>
-                    <li class="categories-links__link">Psychology</li>
-                    <li class="categories-links__link">Science</li>
-                    <li class="categories-links__link">Technology</li>
-                    <li class="categories-links__link">Travel & Maps</li>
+                    <li class="categories-links__link" data-category="1">Architecture</li>
+                    <li class="categories-links__link" data-category="2">Art & Fashion</li>
+                    <li class="categories-links__link" data-category="3">Biography</li>
+                    <li class="categories-links__link" data-category="4">Business</li>
+                    <li class="categories-links__link" data-category="5">Crafts & Hobbies</li>
+                    <li class="categories-links__link" data-category="6">Drama</li>
+                    <li class="categories-links__link" data-category="7">Fiction</li>
+                    <li class="categories-links__link" data-category="8">Food & Drink</li>
+                    <li class="categories-links__link" data-category="9">Health & Wellbeing</li>
+                    <li class="categories-links__link" data-category="10">History & Politics</li>
+                    <li class="categories-links__link" data-category="11">Humor</li>
+                    <li class="categories-links__link" data-category="12">Poetry</li>
+                    <li class="categories-links__link" data-category="13">Psychology</li>
+                    <li class="categories-links__link" data-category="14">Science</li>
+                    <li class="categories-links__link" data-category="15">Technology</li>
+                    <li class="categories-links__link" data-category="16">Travel & Maps</li>
                 </ul>
             </div>
             <div class="category-books">
-                lo
+
             </div>
+        </section>
+        <section class="main__more-books flex">
+            <button class="main__more-books--button">Load more</button>
         </section>
     </main>
 
     <!-- Скрипты -->
-    <script src="./src/scripts/javascript/slider.js"></script>
+    <script src="./dist/main.js"></script>
+    <!--     <script type="module" src="./src/scripts/javascript/slider.js"></script>
+    <script type="module" src="./src/scripts/javascript/chengedCatigories.js"></script>
+    <script type="module" src="./src/scripts/javascript/index.js"></script>
+    <script type="module" src="./src/scripts/javascript/booksByCategory.js"></script> -->
 </body>
 
 </html>

@@ -1,0 +1,50 @@
+@media (max-width: 1301px) {
+  .categories {
+    width: 316px;
+  }
+  .categories-links {
+    padding-left: 98px;
+  }
+}
+@media (max-width: 1201px) {
+  .category-books {
+    grid-gap: 40px;
+  }
+  .book-card--img-settings {
+    margin-right: 13px;
+  }
+}
+@media (max-width: 1035px) {
+  .main__slider {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+  .section__additional-information-one {
+    display: none;
+  }
+  .section__additional-information-two {
+    display: none;
+  }
+  .main__categories-and-category-books {
+    justify-content: space-around;
+  }
+  .categories {
+    height: 910px;
+  }
+  .categories-links__link {
+    font-size: 18px;
+  }
+  .categories-links__link--active {
+    font-size: 22px;
+  }
+  .category-books {
+    margin-left: 0;
+    grid-template-columns: minmax(212px, 424px);
+  }
+  .main__more-books {
+    justify-content: flex-end;
+    margin-right: 170px;
+  }
+}
+
+/*# sourceMappingURL=mediaRequest.css.map */

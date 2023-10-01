@@ -1,0 +1,5 @@
+import './src/css/style.css'
+import './src/css/mediaRequest.css'
+import './src/css/fonts.css'
+import './src/css/reset.css'
+import './src/scripts/javascript/index.js'
